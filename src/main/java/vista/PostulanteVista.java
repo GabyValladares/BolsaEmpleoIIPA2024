@@ -6,7 +6,9 @@ package vista;
 
 import java.util.ArrayList;
 import javax.swing.JComboBox;
+import modelo.PersonaModelo;
 import modelo.PostulanteModelo;
+import controlador.PostulanteControlador;
 
 /**
  *
@@ -357,6 +359,10 @@ public class PostulanteVista extends javax.swing.JInternalFrame {
           p.setEstado(false);
       }
       txtAMostrar.setText(p.toString());
+      PostulanteControlador pC=new PostulanteControlador();
+      pC.insertarPostulante(p);
+      
+      
     }//GEN-LAST:event_btnCrearActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
