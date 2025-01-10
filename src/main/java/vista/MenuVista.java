@@ -30,6 +30,7 @@ public class MenuVista extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmnPostulante = new javax.swing.JMenuItem();
+        mniEmpleador = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,6 +56,14 @@ public class MenuVista extends javax.swing.JFrame {
         });
         jMenu1.add(jmnPostulante);
 
+        mniEmpleador.setText("Empleadores");
+        mniEmpleador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniEmpleadorActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mniEmpleador);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Edit");
@@ -70,7 +79,7 @@ public class MenuVista extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpVista)
+            .addComponent(jdpVista, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -82,6 +91,15 @@ public class MenuVista extends javax.swing.JFrame {
         jdpVista.add(pv);
         pv.show();
     }//GEN-LAST:event_jmnPostulanteActionPerformed
+
+    private void mniEmpleadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniEmpleadorActionPerformed
+        // TODO add your handling code here:
+        EmpleadorVista ev=new EmpleadorVista();
+        jdpVista.add(ev);
+        ev.show();
+        
+        
+    }//GEN-LAST:event_mniEmpleadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,5 +142,6 @@ public class MenuVista extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JDesktopPane jdpVista;
     private javax.swing.JMenuItem jmnPostulante;
+    private javax.swing.JMenuItem mniEmpleador;
     // End of variables declaration//GEN-END:variables
 }
